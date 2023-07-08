@@ -1,0 +1,309 @@
+body {
+  background-color: hotpink;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: chartreuse;
+  font-family: "coffee";
+}
+
+@font-face {
+  font-family: "coffee";
+  src: url(../dafont/BonusCoffee.ttf);
+}
+
+.content {
+  width: 100vw;
+  height: 100vw;
+}
+
+.content > h1 {
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 2rem;
+  }
+}
+
+.pokemoms {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 380px) {
+  .pokemoms {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .pokemoms {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pokemoms {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.pokemom {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: rgb(57, 57, 57);
+  border-radius: 1rem;
+}
+
+.name {
+  color: white;
+  margin-bottom: 0;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pokemom .detail img {
+  max-width: 100%;
+  height: 70px;
+  margin-left: 8.5%;
+}
+
+.pokemom .types {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.type {
+  background-color: rgb(101, 101, 101);
+  color: black;
+  padding: 0.2rem 0.3rem;
+  margin: 0.25rem 0;
+  border-radius: 1rem;
+  font-size: 0.625rem;
+}
+
+.pokemom .number {
+  opacity: 0.5;
+  text-align: right;
+  font-size: 0.825rem;
+}
+
+@media screen and (min-width: 992px) {
+  .name {
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .pokemom {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .pokemom .detail img {
+    margin-left: 28%;
+  }
+
+  .types {
+    text-align: center;
+  }
+
+  .type {
+    font-size: 1.1rem;
+  }
+}
+
+.number{
+  color: rgb(0, 0, 0);
+}
+
+/* li */
+
+.normal {
+  background-color: #a6a877bb;
+}
+
+.grass {
+  background-color: #77c850bb;
+}
+
+.fire {
+  background-color: #ee7f30bb;
+}
+
+.water {
+  background-color: #678feebb;
+}
+
+.electric {
+  background-color: #ffcc00bb;
+}
+
+.ice {
+  background-color: #98d5d7bb;
+}
+
+.ground {
+  background-color: #dfbf69bb;
+}
+
+.flying {
+  background-color: #a98ff0bb;
+}
+
+.poison {
+  background-color: #a040a0bb;
+}
+
+.fighting {
+  background-color: #bf3029bb;
+}
+
+.psychic {
+  background-color: #f65687bb;
+}
+
+.dark {
+  background-color: #725847bb;
+}
+
+.bug {
+  background-color: #b8a137bb;
+}
+
+.stell {
+  background-color: #b9b7cfbb;
+}
+
+.dragon {
+  background-color: #6f38f6bb;
+}
+
+.fairy {
+  background-color: #f9aec7bb;
+}
+
+
+/* tipos */
+
+.normalli {
+  background-color: #a6a877;
+}
+
+.grassli {
+  background-color: #77c850;
+}
+
+.fireli {
+  background-color: #ee7f30;
+}
+
+.waterli {
+  background-color: #678fee;
+}
+
+.electricli {
+  background-color: #ffcc00;
+}
+
+.iceli {
+  background-color: #98d5d7;
+}
+
+.groundli {
+  background-color: #dfbf69;
+}
+
+.flyingli {
+  background-color: #a98ff0;
+}
+
+.poisonli {
+  background-color: #a040a0;
+}
+
+.fightingli {
+  background-color: #bf3029;
+}
+
+.psychicli {
+  background-color: #f65687;
+}
+
+.darkli {
+  background-color: #725847;
+}
+
+.bugli {
+  background-color: #b8a137;
+}
+
+.stellli {
+  background-color: #b9b7cf;
+}
+
+.dragonli {
+  background-color: #6f38f6;
+}
+
+.fairyli {
+  background-color: #f9aec7;
+}
+
+.pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.pagination button{
+  padding: 0.25rem 0.5rem;
+  background-color: #6c79db;
+  border: none;
+  border-radius: 1rem;
+}
+
+
+/* color
+
+normal #a6a877
+grass #77c850
+fire #ee7f30
+water #678fee
+eletric #f7cf2e
+ice #98d5d7
+ground #dfbf69
+flying #a98ff0 
+poison #a040a0 
+fighting #bf3029 
+psychic #f65687 
+dark #725847 
+rock #b8a137 
+bug #a8b720 
+ghost #6e5896 
+stell #b9b7cf 
+dragon #6f38f6 
+fairy #f9aec7
+
+*/
