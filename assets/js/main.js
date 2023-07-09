@@ -9,7 +9,7 @@ let limit = 10
 let offset = 0
 const maxRecords = 151
 
-function elementHtml(pokemon){
+function elementHtmlPokeminIndividual(pokemon){
     return `
             <!DOCTYPE html>
         <html lang="en">
@@ -69,7 +69,7 @@ function backMain(){
 
 function salvaDados(id){
     elementoPai.parentElement.removeChild(elementoPai)
-    pokeApi.directNewPagPokemon(id).then(reposta => elementoBody.innerHTML = elementHtml(reposta))
+    pokeApi.directNewPagPokemon(id).then(reposta => elementoBody.innerHTML = elementHtmlPokeminIndividual(reposta))
     
 }
 
