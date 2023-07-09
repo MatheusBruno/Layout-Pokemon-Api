@@ -9,6 +9,8 @@ function convertPokeApiDetailToPokemon(pokeDetail){
     pokemon.types = types
     pokemon.type = type
     pokemon.imgPhoto = pokeDetail.sprites.other.dream_world.front_default
+    const abillity = pokeDetail.abilities.map(resultado => resultado.ability.name)
+    pokemon.abillity = abillity
     return pokemon
     // converte os dados da API para um classe
 }
@@ -29,4 +31,11 @@ pokeApi.getPokemons = (offset = 0, limit = 10) => {
     .then(result => Promise.all(result)) // Vai obter os dados de cada link que foi gerado pela função map em cima
     .then(result => result) // Retorna uma lista de objetos com seus dados
     .catch(error => console.log(error)) // Informa o erro
+}
+
+pokeApi.directNewPagPokemon = (id) => {
+    url = `https://pokeapi.co/api/v2/pokemon/${id}`
+    return fetch(url)
+    .then(reposta => reposta.json())
+    .then(resposta => convertPokeApiDetailToPokemon(resposta))
 }
